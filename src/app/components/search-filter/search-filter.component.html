@@ -1,0 +1,10 @@
+<div>
+    <label for="">Search student: </label>
+    <input placeholder="Search" type="text" [(ngModel)]="query" >
+</div>
+
+<div *ngFor="let student of students | searchFilter:query; let i = index;">
+  <h3>Student {{ i+1 }} </h3>
+  <p> {{ student.name }} </p>
+  <p> {{ student.email }} </p>
+</div>
